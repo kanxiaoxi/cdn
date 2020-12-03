@@ -1,6 +1,6 @@
 :root {
     /* 心之尺寸 */
-    --heart-size: 10px;
+    --heart-size: 8px;
     /* 心之颜色 */
     --heart-color: red;
     /* 心之所在 */
@@ -9,7 +9,7 @@
 }
 
 .heart {
-    position: fixed;
+    position: absolute;
     width: var(--heart-size);
     height: var(--heart-size);
     left: var(--left);
