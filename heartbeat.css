@@ -10,46 +10,43 @@
 
 .heart {
     position: absolute;
-    width: var(--heart-size);
-    height: var(--heart-size);
     left: var(--left);
     bottom: var(--bottom);
+    width: var(--heart-size);
+    height: var(--heart-size);
     background-color: var(--heart-color);
-
     transform: rotate(-45deg);
-
     animation-name: beat;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 
 .heart::after {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: var(--heart-size);
+    height: var(--heart-size);
     background-color: var(--heart-color);
     content: "";
     border-radius: 50%;
-    position: absolute;
-    width: var(--heart-size);
-    height: var(--heart-size);
-    top: 0px;
-    left: 50%;
 }
 
 .heart::before {
+    position: absolute;
+    top: -50%;
+    left: 0px;
+    width: var(--heart-size);
+    height: var(--heart-size);
     background-color: var(--heart-color);
     content: "";
     border-radius: 50%;
-    position: absolute;
-    width: var(--heart-size);
-    height: var(--heart-size);
-    top: -50%;
-    left: 0px;
 }
 
 @keyframes beat {
     0% {
         transform: scale(1) rotate(-45deg);
     }
-
     50% {
         transform: scale(0.8) rotate(-45deg);
     }
